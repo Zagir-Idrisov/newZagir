@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Journey Tours</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url('background.jpg') center/cover no-repeat;
+      color: white;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      height: 100%;
+      width: 100%;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .title-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .continent {
+      font-size: 32px;
+      opacity: 0.5;
+    }
+
+    .country {
+      font-size: 64px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .description {
+      max-width: 500px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    .explore-button {
+      background-color: #00A9C9;
+      padding: 12px 24px;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      margin-top: 40px;
+    }
+
+    .card {
+      background-color: white;
+      color: black;
+      width: 200px;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .sidebar {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      font-size: 18px;
+      opacity: 0.3;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 20px;
+      right: 40px;
+      font-size: 18px;
+      opacity: 0.5;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <div class="logo">Journey</div>
+      <nav>
+        <a href="#">News</a>
+        <a href="#">Favorites</a>
+        <a href="#" style="border-bottom: 2px solid white;">Tour</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <div class="title-section">
+      <div class="continent">ASIA</div>
+      <div class="country">ICELAND</div>
+      <div class="description">
+        Iceland offers a combination of intriguing landscapes from glaciers and hot springs to geysers, volcanoes and lava deserts.
+      </div>
+      <button class="explore-button">Explore →</button>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <img src="bangkok.jpg" alt="Bangkok, Thailand">
+        <div class="card-title">Bangkok, Thailand</div>
+      </div>
+      <div class="card">
+        <img src="santorini.jpg" alt="Santorini, Greece">
+        <div class="card-title">Santorini, Greece</div>
+      </div>
+      <div class="card">
+        <img src="colombo.jpg" alt="Colombo, Sri Lanka">
+        <div class="card-title">Colombo, Sri Lanka</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar">AUSTRALIA</div>
+  <div class="page-number">05 / 06</div>
+</body>
+</html>
